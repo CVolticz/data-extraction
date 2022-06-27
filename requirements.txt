@@ -1,0 +1,9 @@
+burl-database @ git+https://github.com/burlingtonstores/burl-database@7377218e6f50e25c2a31396a65c454263d2d3e79
+jupyter==1.0.0
+lxml==4.8.0
+openpyxl==3.0.7
+pandas==1.4.2
+pytest==7.1.2
+PyYAML==5.4.1
+requests==2.27.1
+tqdm==4.64.0
