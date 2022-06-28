@@ -18,7 +18,14 @@ def process(chunk, path):
 
 
 def fetch_data_sls(start_date, end_date):
-
+    sqldb = SQLServerDatabaseConnector(
+            connection_parameters=dict(DRIVER='NetezzaSQL',
+                                    SERVER='plwips.burlington.com',
+                                    PORT='5480',
+                                    DATABASE='QS_PRODUCTION',
+                                    UID='read_only',
+                                    PWD='bcfro')
+        )
 
     query_stmt = f"""SELECT *,
                         str.STORE_SRCNUM AS STORE,
@@ -81,8 +88,8 @@ def fetch_data_sls(start_date, end_date):
 
 
 if __name__ == "__main__":
-    start_date="2021-08-01"
-    end_date="2021-08-31"
+    start_date="2021-10-15"
+    end_date="2021-10-31"
     # month = "03-2022"
 
     result = fetch_data_sls(start_date, end_date) 
